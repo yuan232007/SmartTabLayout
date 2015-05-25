@@ -5,7 +5,7 @@ android {
   buildToolsVersion BUILD_TOOLS_VERSION
 
   defaultConfig {
-    minSdkVersion 10
+    minSdkVersion 15
     targetSdkVersion COMPILE_SDK_VERSION as int
     versionCode VERSION_CODE as int
     versionName VERSION_NAME
@@ -39,4 +39,5 @@ dependencies {
   compile project(':library')
   compile project(':utils-v4')
   compile 'com.android.support:appcompat-v7:22.0.0'
+  compile 'com.github.leonardoxh:custom-font:1.2'
 }
