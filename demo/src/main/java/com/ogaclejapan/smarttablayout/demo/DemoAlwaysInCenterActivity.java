@@ -34,18 +34,27 @@ public class DemoAlwaysInCenterActivity extends ActionBarActivity {
 
     ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
     SmartTabLayout viewPagerTab = (SmartTabLayout) findViewById(R.id.tabs);
-    demo.setup(viewPagerTab);
 
-    FragmentPagerItems pages = new FragmentPagerItems(this);
-    for (int titleResId : demo.tabs()) {
-      pages.add(FragmentPagerItem.of(getString(titleResId), DemoFragment.class));
-    }
-
-    FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
-        getSupportFragmentManager(), pages);
-
-    viewPager.setAdapter(adapter);
+    viewPager.setAdapter(new HomeFragmentAdapter(getSupportFragmentManager(), this));
     viewPagerTab.setViewPager(viewPager);
+    viewPagerTab.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+      @Override
+      public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+      }
+
+      @Override
+      public void onPageSelected(int position) {
+
+      }
+
+      @Override
+      public void onPageScrollStateChanged(int state) {
+
+      }
+    });
+
+    viewPager.setCurrentItem(2);
 
 
   }

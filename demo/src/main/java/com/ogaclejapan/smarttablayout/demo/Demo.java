@@ -28,11 +28,6 @@ public enum Demo {
     public void startActivity(Context context) {
       DemoAlwaysInCenterActivity.startActivity(context, this);
     }
-
-    @Override
-    public int[] tabs() {
-      return tab2();
-    }
   };
 
   //CUSTOM_TAB(R.string.demo_title_custom_tab_text, R.layout.demo_custom_tab_text),
